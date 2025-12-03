@@ -1,9 +1,10 @@
 import './index.css';
+import Login from '@/pages/01_login';
 
 function App() {
   return (
     <>
-      <div className='mx-auto items-center text-green-300'>Selamat pagi</div>
+      <Login />
     </>
   );
 }
