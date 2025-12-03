@@ -7,46 +7,55 @@ export default function Login() {
   const [show, setShow] = useState(false);
 
   return (
-    <section className='absolute top-1/2 mx-auto flex h-auto w-full -translate-y-1/2 items-center justify-center text-[#FDFDFD]'>
-      <div className='flex h-490 w-446 flex-col items-center justify-center bg-[#181D27]'>
+    <section className='absolute top-1/2 mx-auto flex h-1024 w-full -translate-y-1/2 items-center justify-center bg-black text-[#FDFDFD]'>
+      <div className='backdrop-blur-[40px]s flex h-490 w-446 flex-col items-center justify-center space-y-24 rounded-2xl border border-[#181D27] bg-[#00000033]'>
         <div className='flex items-center justify-center gap-11'>
           <img src='/icons/01_iconbrand.svg' alt='iconbrand' />
-          <p className='text-display-sm font-bold'>Sociality</p>
+          <p className='text-xs-lh font-bold'>Sociality</p>
         </div>
-        <p className='text-display-sm font-bold'>Welcome Back!</p>
+        <p className='text-xs-lh font-bold'>Welcome Back!</p>
         <div className='space-y-20'>
           {/* Email */}
           <div className='space-y-2'>
-            <h3>Email</h3>
+            <h3 className='md:text-md text-sm font-bold'>Email</h3>
             <Input
-              placeholder='johdoe@email.com'
-              className='h-48 w-398 bg-[#0A0D12] px-16 py-9'
+              placeholder='Enter your email'
+              className='text-md h-48 w-398 border border-[#181D27] bg-[#0A0D12] px-16 py-9'
             />
           </div>
-
           {/* Password */}
           <div className='space-y-2'>
-            <h3>Password</h3>
+            <h3 className='md:text-md text-sm font-bold'>Password</h3>
             <div className='relative'>
               <Input
                 type={show ? 'text' : 'password'}
-                placeholder='johndoe123'
-                className='h-48 w-398 bg-[#0A0D12] px-16 py-9 pr-40'
+                placeholder='Enter your password'
+                className='text-md h-48 w-398 border border-[#181D27] bg-[#0A0D12] px-16 py-9 pr-40'
               />
               <button
                 type='button'
                 onClick={() => setShow(!show)}
                 className='absolute top-1/2 right-6 -translate-y-1/2 text-[#FDFDFD]'
               >
-                {show ? <EyeOff size={24} /> : <Eye size={24} />}
+                {show ? (
+                  <EyeOff size={24} className='hover:cursor-pointer' />
+                ) : (
+                  <Eye size={24} className='hover:cursor-pointer' />
+                )}
               </button>
             </div>
           </div>
-
           {/* Button */}
           <div>
-            <Button className='bg-red h-48 w-398'>Login</Button>
+            <Button className='text-md h-48 w-398 rounded-full bg-[#6936F2] font-bold hover:cursor-pointer'>
+              Login
+            </Button>
           </div>
+          {/* Don't have an account? */}
+          <p className='md:text-md space-x-4 text-center text-sm font-semibold'>
+            <span>Don't have an account?</span>
+            <span className='text-[#7F51F9]'>Register</span>
+          </p>
         </div>
       </div>
     </section>

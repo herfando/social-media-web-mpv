@@ -15,7 +15,7 @@ export default function Button({
   return (
     <Comp
       {...props}
-      className={`inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-all outline-none disabled:pointer-events-none disabled:opacity-50 ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium transition-all outline-none disabled:pointer-events-none disabled:opacity-50 ${className}`}
     />
   );
 }
