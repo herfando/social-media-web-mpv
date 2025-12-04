@@ -257,16 +257,13 @@ html {
 @layer base {
   .custom-container {
     margin: 0 auto;
-    @apply max-w-1232 pr-16 pl-16;
+    @apply max-w-1200 pr-16 pl-16;
   }
 }
 
 body {
-  @apply bg-background text-foreground;
+  @apply bg-black text-[#FDFDFD];
 
-  .dark & {
-    @apply bg-black text-white;
-  }
   font-family: 'Quicksand', sans-serif;
 }
 
