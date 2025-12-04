@@ -2,9 +2,9 @@ import { Heart, Send, Plus } from 'lucide-react';
 
 export default function Home() {
   return (
-    <section className='relative mx-auto mt-16 h-auto w-600 md:mt-40'>
+    <section className='mx-auto mt-16 flex h-auto max-w-600 items-center justify-center px-16 md:mt-40'>
       {/* Card */}
-      <div className='h-858 space-y-15'>
+      <div className='h-858 w-full space-y-15'>
         {/*1.  Profile picture */}
         <div className='flex items-center'>
           {/* picture */}
@@ -13,8 +13,10 @@ export default function Home() {
           </div>
           {/* Name and status online */}
           <div>
-            <p>Johndoe</p>
-            <p>1 Minutes Ago</p>
+            <p className='md:text-md text-sm font-bold'>Johndoe</p>
+            <p className='font-regular md:text-md text-xs text-[#A4A7AE]'>
+              1 Minutes Ago
+            </p>
           </div>
         </div>
         {/* 2. Big picture */}
