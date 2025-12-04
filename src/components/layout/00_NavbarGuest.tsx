@@ -9,20 +9,13 @@ export default function NavbarGuest() {
   const [showSearch, setShowSearch] = useState(false);
   //#region - Search Query
 
-  const handleSearch = (value: string) => {
-    const q = (value || '').trim();
-  };
-
   const onSearchChange = (eOrVal: any) => {
     if (typeof eOrVal === 'string') {
-      handleSearch(eOrVal);
       return;
     }
     if (eOrVal && typeof eOrVal.target?.value === 'string') {
-      handleSearch(eOrVal.target.value);
       return;
     }
-    handleSearch('');
   };
   //#endregion
 
