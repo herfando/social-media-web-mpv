@@ -19,7 +19,7 @@ export default function NavbarUser() {
   return (
     <section className='custom-container flex h-80 w-full items-center justify-between'>
       {/* Icon */}
-      <div className='flex gap-11'>
+      <div className='flex items-center gap-11'>
         <img
           className='h-30 w-30'
           src='../icons/01_iconbrand.svg'
