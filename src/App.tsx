@@ -3,14 +3,16 @@ import './index.css';
 // import Register from './pages/02_register';
 // import NavbarGuest from './components/layout/00_navbarGuest';
 // import NavbarUser from './components/layout/00_navbarUser';
-import Home from './pages/03_home';
+import SearchUser from './components/layout/03_searchUser';
+// import Home from './pages/03_home';
 
 function App() {
   return (
     <>
       {/* <NavbarGuest /> */}
       {/* <NavbarUser /> */}
-      <Home />
+      {/* <Home /> */}
+      <SearchUser />
       {/* <Login /> */}
       {/* <Register /> */}
     </>
