@@ -6,7 +6,8 @@ import './index.css';
 // import SearchUser from './components/layout/03_searchUser';
 // import Home from './pages/03_home';
 // import Comment from './pages/04_comment';
-import MyProfile from './pages/05_myProfile';
+// import MyProfile from './pages/05_myProfile';
+import AddPost from './pages/06_addPost';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       {/* <Home /> */}
       {/* <SearchUser /> */}
       {/* <Comment /> */}
-      <MyProfile />
+      {/* <MyProfile /> */}
+      <AddPost />
       {/* <Login /> */}
       {/* <Register /> */}
     </>
