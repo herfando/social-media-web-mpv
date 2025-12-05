@@ -3,8 +3,10 @@ import './index.css';
 // import Register from './pages/02_register';
 // import NavbarGuest from './components/layout/00_navbarGuest';
 // import NavbarUser from './components/layout/00_navbarUser';
-import SearchUser from './components/layout/03_searchUser';
+// import SearchUser from './components/layout/03_searchUser';
 // import Home from './pages/03_home';
+// import Comment from './pages/04_comment';
+import MyProfile from './pages/05_myProfile';
 
 function App() {
   return (
@@ -12,7 +14,9 @@ function App() {
       {/* <NavbarGuest /> */}
       {/* <NavbarUser /> */}
       {/* <Home /> */}
-      <SearchUser />
+      {/* <SearchUser /> */}
+      {/* <Comment /> */}
+      <MyProfile />
       {/* <Login /> */}
       {/* <Register /> */}
     </>
