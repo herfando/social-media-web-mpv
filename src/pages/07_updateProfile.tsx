@@ -17,7 +17,9 @@ export default function UpdateProfile() {
           <div className='flex h-130 w-130 items-center justify-center overflow-hidden rounded-full bg-gray-200 hover:cursor-pointer'>
             <span className='text-3xl text-gray-400'>👤</span>
           </div>{' '}
-          <span className='self-center'>Change Photo</span>
+          <span className='h-48 w-160 content-center items-center rounded-full border border-[#181D27] text-center'>
+            Change Photo
+          </span>
         </div>
         {/* 2.Form */}
         <div>
