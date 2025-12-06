@@ -7,7 +7,8 @@ import './index.css';
 // import Home from './pages/03_home';
 // import Comment from './pages/04_comment';
 // import MyProfile from './pages/05_myProfile';
-import AddPost from './pages/06_addPost';
+// import AddPost from './pages/06_addPost';
+import UpdateProfile from './pages/07_updateProfile';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       {/* <SearchUser /> */}
       {/* <Comment /> */}
       {/* <MyProfile /> */}
-      <AddPost />
+      {/* <AddPost /> */}
+      <UpdateProfile />
       {/* <Login /> */}
       {/* <Register /> */}
     </>
