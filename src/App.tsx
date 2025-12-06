@@ -7,8 +7,9 @@ import './index.css';
 // import Home from './pages/03_home';
 // import Comment from './pages/04_comment';
 // import MyProfile from './pages/05_myProfile';
+import FriendsProfile from './pages/08_friendsProfile';
 // import AddPost from './pages/06_addPost';
-import UpdateProfile from './pages/07_updateProfile';
+// import UpdateProfile from './pages/07_updateProfile';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       {/* <Comment /> */}
       {/* <MyProfile /> */}
       {/* <AddPost /> */}
-      <UpdateProfile />
+      {/* <UpdateProfile /> */}
+      <FriendsProfile />
       {/* <Login /> */}
       {/* <Register /> */}
     </>
