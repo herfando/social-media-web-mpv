@@ -2,12 +2,23 @@ import Button from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Eye, EyeOff } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
+  //#region - navigate login to home
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    console.log('Login success');
+    navigate('/home');
+  };
+  //#endregion
+
   const [show, setShow] = useState(false);
 
   return (
-    <section className='absolute top-1/2 mx-auto flex h-1024 w-full -translate-y-1/2 items-center justify-center bg-black text-[#FDFDFD]'>
+    <section className='absolute top-1/2 mx-auto flex h-auto w-full -translate-y-1/2 items-center justify-center bg-black text-[#FDFDFD]'>
       <div className='backdrop-blur-[40px]s flex h-490 w-446 flex-col items-center justify-center space-y-24 rounded-2xl border border-[#181D27] bg-[#00000033]'>
         <div className='flex items-center justify-center gap-11'>
           <img src='/icons/01_iconbrand.svg' alt='iconbrand' />
@@ -54,7 +65,9 @@ export default function Login() {
           {/* Don't have an account? */}
           <p className='md:text-md space-x-4 text-center text-sm font-semibold'>
             <span>Don't have an account?</span>
-            <span className='text-[#7F51F9]'>Register</span>
+            <Link to='/register'>
+              <span className='text-[#7F51F9]'>Register</span>
+            </Link>
           </p>
         </div>
       </div>
