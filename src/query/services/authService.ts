@@ -1,20 +1,19 @@
-// api/auth.ts
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL; // ambil dari .env
+const API_URL = import.meta.env.VITE_API_URL;
 
 // Register
-export const registerUser = async (data: {
+export const Register = (data: {
   name: string;
+  username: string;
   email: string;
+  phone: string;
   password: string;
 }) => {
-  const res = await axios.post(`${API_URL}/auth/register`, data);
-  return res.data;
+  return axios.post(`${API_URL}/auth/register`, data);
 };
 
 // Login
-export const loginUser = async (data: { email: string; password: string }) => {
-  const res = await axios.post(`${API_URL}/auth/login`, data);
-  return res.data;
+export const Login = (data: { email: string; password: string }) => {
+  return axios.post(`${API_URL}/auth/login`, data);
 };
