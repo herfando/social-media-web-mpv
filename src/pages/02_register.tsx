@@ -3,8 +3,19 @@ import { Input } from '@/components/ui/input';
 import { Eye, EyeOff } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
+  //#region
+  const navigate = useNavigate();
+
+  const handleRegister = () => {
+    console.log('Register success');
+    navigate('/login');
+  };
+
+  //#endregion
+
   const [show, setShow] = useState(false);
 
   return (
@@ -98,8 +109,11 @@ export default function Login() {
           </div>
           {/* Button */}
           <div>
-            <Button className='text-md h-48 w-398 rounded-full bg-[#6936F2] font-bold hover:cursor-pointer'>
-              Login
+            <Button
+              onClick={handleRegister}
+              className='text-md h-48 w-398 rounded-full bg-[#6936F2] font-bold hover:cursor-pointer'
+            >
+              Submit
             </Button>
           </div>
           {/* Don't have an account? */}
