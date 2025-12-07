@@ -20,19 +20,19 @@ export default function Login() {
 
   return (
     <section className='absolute top-1/2 mx-auto flex h-auto w-full -translate-y-1/2 items-center justify-center bg-black text-[#FDFDFD]'>
-      <div className='backdrop-blur-[40px]s flex h-784 w-446 flex-col items-center justify-center space-y-24 rounded-2xl border border-[#181D27] bg-[#00000033]'>
+      <div className='flex h-746 w-345 flex-col items-center justify-center space-y-24 rounded-2xl border border-[#181D27] bg-[#00000033] backdrop-blur-2xl md:h-784 md:w-523'>
         <div className='flex items-center justify-center gap-11'>
           <img src='/icons/01_iconbrand.svg' alt='iconbrand' />
           <p className='text-xs-lh font-bold'>Sociality</p>
         </div>
         <p className='text-xs-lh font-bold'>Register</p>
-        <div className='space-y-20'>
+        <div className='w-full space-y-20 px-16 md:px-24'>
           {/* Email */}
           <div className='space-y-2'>
             <h3 className='md:text-md text-sm font-bold'>Email</h3>
             <Input
               placeholder='Enter your email'
-              className='text-md h-48 w-398 border border-[#181D27] bg-[#0A0D12] px-16 py-9'
+              className='text-md h-48 w-full border border-[#181D27] bg-[#0A0D12] px-16 py-9'
             />
           </div>
           {/* Username */}
@@ -40,7 +40,7 @@ export default function Login() {
             <h3 className='md:text-md text-sm font-bold'>Username</h3>
             <Input
               placeholder='Enter your email'
-              className='text-md h-48 w-398 border border-[#181D27] bg-[#0A0D12] px-16 py-9'
+              className='text-md h-48 w-full border border-[#181D27] bg-[#0A0D12] px-16 py-9'
             />
           </div>
           {/* Number Phone */}
@@ -48,7 +48,7 @@ export default function Login() {
             <h3 className='md:text-md text-sm font-bold'>Number Phone</h3>
             <Input
               placeholder='Enter your email'
-              className='text-md h-48 w-398 border border-[#181D27] bg-[#0A0D12] px-16 py-9'
+              className='text-md h-48 w-full border border-[#181D27] bg-[#0A0D12] px-16 py-9'
             />
           </div>
           {/* Password */}
@@ -58,7 +58,7 @@ export default function Login() {
               <Input
                 type={show ? 'text' : 'password'}
                 placeholder='Enter your password'
-                className='text-md h-48 w-398 border border-[#181D27] bg-[#0A0D12] px-16 py-9 pr-40'
+                className='text-md h-48 w-full border border-[#181D27] bg-[#0A0D12] px-16 py-9 pr-40'
               />
               <button
                 type='button'
@@ -86,7 +86,7 @@ export default function Login() {
               <Input
                 type={show ? 'text' : 'password'}
                 placeholder='Enter your Confirm Password'
-                className='text-md h-48 w-398 border border-[#181D27] bg-[#0A0D12] px-16 py-9 pr-40'
+                className='text-md h-48 w-full border border-[#181D27] bg-[#0A0D12] px-16 py-9 pr-40'
               />
               <button
                 type='button'
@@ -111,7 +111,7 @@ export default function Login() {
           <div>
             <Button
               onClick={handleRegister}
-              className='text-md h-48 w-398 rounded-full bg-[#6936F2] font-bold hover:cursor-pointer'
+              className='text-md h-48 w-full rounded-full bg-[#6936F2] font-bold hover:cursor-pointer'
             >
               Submit
             </Button>
