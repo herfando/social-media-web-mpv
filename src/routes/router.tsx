@@ -1,4 +1,3 @@
-// routes/AppRoutes.tsx
 import { Routes, Route, Outlet } from 'react-router-dom';
 import Home from '@/pages/03_home';
 import Login from '@/pages/01_login';

@@ -4,6 +4,7 @@ import Button from '../ui/button';
 import ToggleHamburger from '../ui/togglehamburger';
 import { useState } from 'react';
 import SearchInput from '@/components/ui/searchInput';
+import { Link } from 'react-router-dom';
 
 export default function NavbarGuest() {
   const [showSearch, setShowSearch] = useState(false);
@@ -64,12 +65,16 @@ export default function NavbarGuest() {
       </div>
       {/* login register */}
       <div className='hidden gap-12 sm:flex'>
-        <Button className='h-44 w-130 border border-[#181D27] font-bold hover:cursor-pointer'>
-          Login
-        </Button>
-        <Button className='h-44 w-130 bg-[#6936F2] font-bold hover:cursor-pointer'>
-          Register
-        </Button>
+        <Link to='/login'>
+          <Button className='h-44 w-130 border border-[#181D27] font-bold hover:cursor-pointer'>
+            Login
+          </Button>
+        </Link>
+        <Link to='/register'>
+          <Button className='h-44 w-130 bg-[#6936F2] font-bold hover:cursor-pointer'>
+            Register
+          </Button>
+        </Link>
       </div>
     </section>
   );
