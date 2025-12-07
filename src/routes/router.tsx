@@ -1,17 +1,26 @@
 // routes/AppRoutes.tsx
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 import Home from '@/pages/03_home';
 import Login from '@/pages/01_login';
 import Register from '@/pages/02_register';
-import { useSelector } from 'react-redux';
-import { type RootState } from '@/redux/store';
+import NavbarGuest from '@/components/layout/01_navbarGuest';
+
+// Before Auth
+const BeforeAuthLayout = () => (
+  <div>
+    <NavbarGuest />
+    <main>
+      <div>
+        <Outlet />
+      </div>
+    </main>
+  </div>
+);
 
 export default function Router() {
-  const token = useSelector((state: RootState) => state.auth.token);
-
   return (
     <Routes>
-      <Route path='/' element={token ? <Home /> : <Navigate to='/login' />} />
+      <Route path='/' element={<Home />} />
       <Route path='/login' element={<Login />} />
       <Route path='/register' element={<Register />} />
     </Routes>
