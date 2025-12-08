@@ -22,7 +22,7 @@ export default function Register() {
   // Show/hide password
   const [show, setShow] = useState(false);
 
-  // Submit handler lengkap
+  // Submit handler completed
   const submitRegister = async () => {
     try {
       await apiRegister;
@@ -34,7 +34,7 @@ export default function Register() {
     }
   };
 
-  // Ambil errors dari formState
+  // take errors from formState
   const {
     formState: { errors },
   } = registerForm;
